@@ -1,0 +1,17 @@
+.table-ui{
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+}
+
+.table-ui tbody tr:hover{
+
+    background:#EFF6FF;
+
+}

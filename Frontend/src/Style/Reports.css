@@ -1,0 +1,51 @@
+body{
+    background:#f5f7fb;
+}
+
+.report-title{
+    font-size:32px;
+    font-weight:700;
+    color:#1e293b;
+}
+
+.report-card{
+    border:none;
+    border-radius:18px;
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
+}
+
+.stat-card{
+    border:none;
+    border-radius:18px;
+    color:white;
+    transition:.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-6px);
+}
+
+.table{
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.table tbody tr:hover{
+    background:#eef5ff;
+}
+
+.search-box{
+    border-radius:30px;
+    padding:12px 20px;
+}
+
+.export-btn{
+    border-radius:25px;
+    padding:10px 25px;
+}
+
+.summary-card{
+    border-radius:18px;
+    border:none;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}

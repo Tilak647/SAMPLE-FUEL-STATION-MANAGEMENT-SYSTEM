@@ -1,0 +1,74 @@
+/* ===========================
+   Main Layout - Light Enterprise Theme
+   =========================== */
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+    background-color: #F8FAFC;
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Page Content */
+.page-content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+    background-color: #F8FAFC;
+}
+
+/* Scrollbar */
+.page-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.page-content::-webkit-scrollbar-track {
+    background: #E2E8F0;
+}
+
+.page-content::-webkit-scrollbar-thumb {
+    background: #94A3B8;
+    border-radius: 10px;
+}
+
+.page-content::-webkit-scrollbar-thumb:hover {
+    background: #64748B;
+}
+
+/* Card Style */
+.card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive Layout */
+@media (max-width: 992px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .page-content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-content {
+        padding: 15px;
+    }
+}

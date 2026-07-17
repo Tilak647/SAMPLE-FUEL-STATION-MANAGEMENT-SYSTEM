@@ -1,0 +1,17 @@
+.input-ui{
+
+    border-radius:12px;
+
+    padding:12px;
+
+    border:1px solid #CBD5E1;
+
+}
+
+.input-ui:focus{
+
+    border-color:#2563EB;
+
+    box-shadow:none;
+
+}

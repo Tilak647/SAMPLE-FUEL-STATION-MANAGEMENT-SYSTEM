@@ -1,0 +1,79 @@
+/* Global Theme */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #F8FAFC;
+  color: #1E293B;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.page-container {
+  padding: 25px;
+  background: #F8FAFC;
+  min-height: 100vh;
+}
+
+.page-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+}
+
+button {
+  background: #2563EB;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 22px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+button:hover {
+  background: #1D4ED8;
+}
+
+input,
+select {
+  padding: 12px;
+  border: 1px solid #CBD5E1;
+  border-radius: 10px;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th {
+  background: #2563EB;
+  color: white;
+  padding: 14px;
+}
+
+td {
+  padding: 14px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+tr:hover {
+  background: #F8FAFC;
+}

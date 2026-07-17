@@ -1,0 +1,33 @@
+:root{
+
+    --primary:#2563EB;
+    --primary-dark:#1D4ED8;
+
+    --success:#10B981;
+    --warning:#F59E0B;
+    --danger:#EF4444;
+
+    --background:#F8FAFC;
+    --surface:#FFFFFF;
+
+    --sidebar:#0F172A;
+
+    --text:#1E293B;
+    --text-light:#64748B;
+
+    --radius:18px;
+
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:var(--background);
+    font-family:'Poppins',sans-serif;
+}

@@ -1,0 +1,48 @@
+.employee-page{
+    background:#f5f7fb;
+    min-height:100vh;
+    padding:30px;
+}
+
+.page-title{
+    font-size:32px;
+    font-weight:700;
+    color:#1e293b;
+}
+
+.stat-card{
+    border:none;
+    border-radius:18px;
+    color:white;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-6px);
+}
+
+.form-card{
+    border:none;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    padding:25px;
+    margin-top:20px;
+}
+
+.table-card{
+    border:none;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    margin-top:25px;
+}
+
+.search-box{
+    border-radius:30px;
+    padding:12px 20px;
+}
+
+.table tbody tr:hover{
+    background:#eef5ff;
+}

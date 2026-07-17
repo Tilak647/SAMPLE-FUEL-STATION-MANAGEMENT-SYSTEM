@@ -1,0 +1,60 @@
+.ai-header{
+    background:linear-gradient(135deg,#2563EB,#1D4ED8);
+    color:white;
+    padding:25px;
+    border-radius:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.ai-header h2{
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+.ai-header p{
+    margin:0;
+    opacity:.9;
+}
+
+.status{
+    background:#10B981;
+    padding:12px 20px;
+    border-radius:30px;
+    font-weight:600;
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+.mini-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    padding:25px;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.mini-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.mini-card svg{
+
+    color:#2563EB;
+
+    margin-bottom:15px;
+
+}

@@ -1,0 +1,45 @@
+body{
+    background:#0F172A;
+    color:white;
+    font-family:'Poppins',sans-serif;
+}
+
+.card{
+    background:#1E293B !important;
+    color:white;
+    border:none;
+    border-radius:15px;
+}
+
+.table{
+    color:white;
+}
+
+.table-dark{
+    background:#2563EB !important;
+}
+
+.form-control{
+    background:#273549;
+    color:white;
+    border:1px solid #334155;
+}
+
+.form-control::placeholder{
+    color:#94A3B8;
+}
+
+.form-control:focus{
+    background:#273549;
+    color:white;
+}
+
+.btn-primary{
+    background:#2563EB;
+    border:none;
+}
+
+.btn-danger{
+    background:#EF4444;
+    border:none;
+}
