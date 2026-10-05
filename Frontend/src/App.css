@@ -16,58 +16,64 @@ a {
   color: inherit;
 }
 
-/* Global Theme Additions */
-
 .page-container {
-  padding: 32px;
+  padding: 25px;
+  background: #F8FAFC;
   min-height: 100vh;
-  /* Background is inherited from body in index.css */
 }
 
 .page-title {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 700;
-  margin-bottom: 30px;
-  background: linear-gradient(135deg, #5B21B6 0%, #EC4899 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-  letter-spacing: -0.5px;
+  margin-bottom: 25px;
 }
 
-/* These are kept to override any specific component level styles,
-   but most styles are now in index.css */
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+}
 
 button {
-  background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+  background: #2563EB;
   color: white;
   border: none;
-  border-radius: 12px;
-  padding: 12px 28px;
-  font-weight: 600;
+  border-radius: 10px;
+  padding: 12px 22px;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+  transition: .3s;
 }
 
 button:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4);
+  background: #1D4ED8;
 }
 
 input,
 select {
-  padding: 14px 16px;
-  border: 2px solid #E2E8F0;
-  border-radius: 12px;
+  padding: 12px;
+  border: 1px solid #CBD5E1;
+  border-radius: 10px;
   width: 100%;
-  font-family: inherit;
-  transition: all 0.3s ease;
 }
 
-input:focus,
-select:focus {
-  border-color: #8B5CF6;
-  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
-  outline: none;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th {
+  background: #2563EB;
+  color: white;
+  padding: 14px;
+}
+
+td {
+  padding: 14px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+tr:hover {
+  background: #F8FAFC;
 }
