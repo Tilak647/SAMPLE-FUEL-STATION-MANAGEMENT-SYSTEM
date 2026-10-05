@@ -44,7 +44,7 @@ public class SaleService {
         System.out.println("Fuel Type: " + sale.getFuelType());
 
         // Find the selected fuel
-        Fuel fuel = fuelRepository.findByFuelType(sale.getFuelType())
+        Fuel fuel = fuelRepository.findFirstByFuelType(sale.getFuelType())
                 .orElseThrow(() -> new RuntimeException("Fuel Not Found"));
 
         // Check stock

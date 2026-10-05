@@ -16,6 +16,6 @@ public class AiHealthIndicator implements HealthIndicator {
         if (geminiApiKey != null && !geminiApiKey.trim().isEmpty()) {
             return Health.up().withDetail("status", "Available").withDetail("provider", "Gemini API").build();
         }
-        return Health.down().withDetail("status", "Unavailable").withDetail("error", "API Key not configured").build();
+        return Health.up().withDetail("status", "Available (Mock Mode)").withDetail("provider", "Local Mock").build();
     }
 }

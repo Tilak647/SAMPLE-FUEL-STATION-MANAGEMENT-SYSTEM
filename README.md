@@ -1,61 +1,82 @@
-# Smart Fuel Station Management System
+# ⛽ Smart Fuel Station Management System (Enterprise Edition)
 
-An Enterprise-grade Fuel Station Management platform powered by Spring Boot, React, and Google Gemini AI.
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+![React](https://img.shields.io/badge/Frontend-React.js-61DAFB?logo=react&logoColor=black)
+![Spring Boot](https://img.shields.io/badge/Backend-Spring%20Boot-6DB33F?logo=spring&logoColor=white)
+![MySQL](https://img.shields.io/badge/Database-MySQL-4479A1?logo=mysql&logoColor=white)
+![AI](https://img.shields.io/badge/AI-Gemini_2.0-orange?logo=google&logoColor=white)
 
-## Architecture
-- **Frontend**: React.js with Framer Motion and Glassmorphism UI
-- **Backend**: Spring Boot 3.3, Spring Security (JWT)
-- **Database**: MySQL 8.0
-- **AI Integration**: Google Gemini AI API
-- **DevOps**: Docker, NGINX, Prometheus/Actuator Monitoring
+A comprehensive, full-stack enterprise web application designed to digitize and automate modern fuel station operations. This project replaces manual ledger tracking with an automated, AI-assisted point-of-sale and inventory management system. 
+
+Designed and built as a fully-featured **Final Year Project**.
 
 ---
 
-## Production Deployment Guide
+## 🚀 Key Features
 
-This system is fully containerized using Docker and orchestrated via Docker Compose.
+*   **🔒 Secure Authentication**: Role-Based Access Control (RBAC) via JWT (Super Admin, Manager, Operator).
+*   **💳 Automated Point of Sale (POS)**: Rapid billing with automatic GST calculations and instant PDF invoice generation.
+*   **📊 Real-Time Dashboard**: Server-Sent Events (SSE) push live sales data to the frontend immediately without refreshing.
+*   **🤖 AI Business Intelligence**: Integrated with Google Gemini AI to analyze raw sales data and provide plain-text business insights.
+*   **📦 Automated Procurement**: Background schedulers detect low fuel stock and automatically generate Purchase Orders to designated suppliers.
+*   **🎭 Presentation Simulation Mode**: A built-in scheduler that automatically generates virtual customer sales every few minutes, allowing the system to demonstrate itself autonomously!
+*   **💾 Automated Daily Backups**: Safeguards database records via scheduled `mysqldump` processes.
 
-### 1. Prerequisites
-- Docker Engine & Docker Compose installed.
-- A valid Google Gemini API Key.
-- SMTP Credentials (e.g., Gmail App Password).
+---
 
-### 2. Configuration
-1. Copy the environment template:
-   ```bash
-   cp .env.example .env
-   ```
-2. Edit `.env` and fill in your secure details:
-   - `DB_PASSWORD`: Set a strong password.
-   - `JWT_SECRET`: Must be a long, secure base64 string.
-   - `GEMINI_API_KEY`: Your AI Studio API Key.
-   - `MAIL_*`: Your SMTP server details for automated reports.
+## 🛠️ Technology Stack
 
-### 3. Startup
-Launch the entire stack in detached mode:
+| Component | Technology | Description |
+| :--- | :--- | :--- |
+| **Frontend** | React.js, CSS3 | Custom enterprise-grade dark theme UI with responsive design. |
+| **Backend** | Spring Boot 3, Java 17 | REST API architecture serving secure endpoints. |
+| **Security** | Spring Security, JWT | Token-based stateless authentication. |
+| **Database** | MySQL, Spring Data JPA | Relational database mapping with Hibernate ORM. |
+| **AI API** | Google Gemini API | Natural language processing for business analytics. |
+
+---
+
+## ⚙️ How to Run Locally
+
+### Prerequisites
+*   Node.js (v16+)
+*   Java Development Kit (JDK 17+)
+*   Maven
+*   MySQL Server (Running on default port `3306`)
+
+### Database Setup
+1. Open MySQL and create a database named `fuelstation_db`.
+2. The application will automatically create the tables and insert Demo Data (Admin user, dummy employees, stock, etc.) upon first boot.
+
+### 1-Click Launch (Recommended for Windows)
+If you are on Windows, simply double-click the `START_DEMO.bat` file located in the root directory. This script will automatically boot both the frontend and backend servers simultaneously.
+
+### Manual Launch
+**Backend:**
 ```bash
-docker-compose up -d --build
+cd backend
+mvn clean compile
+mvn spring-boot:run
 ```
 
-This command will:
-1. Start the **MySQL** database and initialize the `fuelstation` schema.
-2. Compile and start the **Spring Boot Backend** (Port 8080).
-3. Compile the **React Frontend** and serve it via **NGINX** (Port 80).
-
-### 4. Accessing the Application
-- **Main Web Interface**: `http://localhost` (or your server's IP/Domain).
-- **Backend API Base**: `http://localhost/api/`
-
-### 5. Monitoring & Logging
-The production configuration enables comprehensive health checks and logging.
-- **System Health**: View live health directly in the "Manager Control Center" via the frontend UI.
-- **Actuator Endpoints**: Accessible directly at `http://localhost/actuator/health` and `http://localhost/actuator/prometheus`.
-- **Logs**: Backend logs are persisted to a Docker volume and can be found in the `/app/logs` directory inside the backend container.
-  - View live logs: `docker logs -f fuelstation-backend`
-
-### 6. Graceful Shutdown
-To stop the application without destroying data volumes:
+**Frontend:**
 ```bash
-docker-compose down
+cd Frontend
+npm install
+npm start
 ```
-*(To completely wipe the database and logs, use `docker-compose down -v`)*
+
+### Default Login
+*   **Email**: `admin@test.com`
+*   **Password**: `admin123`
+
+---
+
+## 👨‍💻 Project Structure Overview
+*   `/backend`: Spring Boot application containing all Controllers, Services, Security Filters, and automated Schedulers.
+*   `/Frontend`: React application containing components, layout views, and API communication logic (Axios).
+*   `PROJECT_REPORT.md`: A detailed documentation file generated specifically for final year thesis reporting.
+
+---
+
+> **Note**: For the AI Assistant to function properly, you must supply a valid Gemini API Key as an environment variable (`GEMINI_API_KEY=your_key_here`). If absent, the system gracefully falls back to mock responses.

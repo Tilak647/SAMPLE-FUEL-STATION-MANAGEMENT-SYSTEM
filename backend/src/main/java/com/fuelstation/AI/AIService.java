@@ -38,6 +38,14 @@ public class AIService {
         this.objectMapper = objectMapper;
     }
 
+    @jakarta.annotation.PostConstruct
+    public void init() {
+        if (geminiApiKey == null || geminiApiKey.trim().isEmpty()) {
+            System.err.println("WARNING: GEMINI_API_KEY environment variable is not set or empty.");
+            System.err.println("AI Features will fall back to mocked responses. To enable real AI, set the GEMINI_API_KEY environment variable.");
+        }
+    }
+
     public String askAI(String question) {
         Double petrolStock = fuelRepository.getPetrolStock();
         Double dieselStock = fuelRepository.getDieselStock();

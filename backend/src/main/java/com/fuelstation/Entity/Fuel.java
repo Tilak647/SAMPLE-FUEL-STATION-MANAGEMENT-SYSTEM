@@ -14,6 +14,8 @@ public class Fuel {
     private Double quantity;
     private Double pricePerLiter;
     private String supplier;
+    private Double minimumThreshold = 500.0; // Default threshold
+    private Double reorderQuantity = 2000.0; // Default reorder amount
 
     public Fuel() {}
 
@@ -51,5 +53,21 @@ public class Fuel {
 
     public void setSupplier(String supplier) {
         this.supplier = supplier;
+    }
+
+    public Double getMinimumThreshold() {
+        return minimumThreshold;
+    }
+
+    public void setMinimumThreshold(Double minimumThreshold) {
+        this.minimumThreshold = minimumThreshold;
+    }
+
+    public Double getReorderQuantity() {
+        return reorderQuantity;
+    }
+
+    public void setReorderQuantity(Double reorderQuantity) {
+        this.reorderQuantity = reorderQuantity;
     }
 }

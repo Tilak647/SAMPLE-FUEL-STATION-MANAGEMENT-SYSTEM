@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SupplierRepository extends JpaRepository<Supplier, Long> {
+    java.util.Optional<Supplier> findByNameIgnoreCase(String name);
 }
